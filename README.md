@@ -5,6 +5,8 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">
   <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">
+  <img src="https://img.shields.io/github/followers/sabrinamiao?label=Followers&style=for-the-badge" alt="GitHub Followers">
+  <img src="https://img.shields.io/github/last-commit/sabrinamiao/sabrinamiao?label=Last%20Commit&style=for-the-badge" alt="Last Commit">
 </p>
 
 ---
@@ -24,9 +26,3 @@
 ### 📫 Reach Me
 * **GitHub:** Open an issue or PR on one of my repos.
 * **Status:** Currently balancing full-time work and family; expect highly efficient, async communication.
-
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sabrinamiao&show_icons=true&theme=transparent" alt="GitHub Stats" height="150">
-</p>

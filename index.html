@@ -35,6 +35,7 @@
     />
     <meta name="twitter:image:alt" content="Sabrina Miao portfolio preview" />
     <title>Sabrina | Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,6 +43,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyANbL5UGRrdICqpOFm3M1K1SNL-QNtv6KM",
+        authDomain: "portfolio-github-907e6.firebaseapp.com",
+        projectId: "portfolio-github-907e6",
+        storageBucket: "portfolio-github-907e6.firebasestorage.app",
+        messagingSenderId: "369437785824",
+        appId: "1:369437785824:web:d0606427d4905cc4c51a85",
+        measurementId: "G-WNY36PT3YD",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      getAnalytics(app);
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -113,7 +131,9 @@
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="#top">Sabrina Miao</a>
+        <a class="brand" href="#top" aria-label="Sabrina Miao home">
+          <img src="/images/logo.jpeg" alt="Sabrina Miao logo" />
+        </a>
         <nav>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>

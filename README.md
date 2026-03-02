@@ -34,4 +34,4 @@
 ---
 
 ### 🌐 Portfolio Page
-* Open `index.html` in your browser to view a single-page portfolio site.
+https://sabrinamiao.github.io/sabrinamiao/

@@ -52,6 +52,15 @@ a {
 .brand {
   font-weight: 800;
   letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.brand img {
+  display: block;
+  height: 40px;
+  width: auto;
 }
 
 .nav nav {

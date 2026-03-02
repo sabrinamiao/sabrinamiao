@@ -7,6 +7,7 @@
       name="description"
       content="Sabrina's portfolio: cross-platform developer focused on React Native, Electron, and modern web apps."
     />
+    <meta name="firebase-api-key" content="" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/" />
     <meta property="og:type" content="website" />
@@ -47,18 +48,24 @@
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyANbL5UGRrdICqpOFm3M1K1SNL-QNtv6KM",
-        authDomain: "portfolio-github-907e6.firebaseapp.com",
-        projectId: "portfolio-github-907e6",
-        storageBucket: "portfolio-github-907e6.firebasestorage.app",
-        messagingSenderId: "369437785824",
-        appId: "1:369437785824:web:d0606427d4905cc4c51a85",
-        measurementId: "G-WNY36PT3YD",
-      };
+      const firebaseApiKey = document
+        .querySelector('meta[name="firebase-api-key"]')
+        ?.content?.trim();
 
-      const app = initializeApp(firebaseConfig);
-      getAnalytics(app);
+      if (firebaseApiKey) {
+        const firebaseConfig = {
+          apiKey: firebaseApiKey,
+          authDomain: "portfolio-github-907e6.firebaseapp.com",
+          projectId: "portfolio-github-907e6",
+          storageBucket: "portfolio-github-907e6.firebasestorage.app",
+          messagingSenderId: "369437785824",
+          appId: "1:369437785824:web:d0606427d4905cc4c51a85",
+          measurementId: "G-WNY36PT3YD",
+        };
+
+        const app = initializeApp(firebaseConfig);
+        getAnalytics(app);
+      }
     </script>
     <script type="application/ld+json">
       {

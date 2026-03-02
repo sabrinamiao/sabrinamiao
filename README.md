@@ -28,5 +28,5 @@
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=[YOUR_GITHUB_HANDLE]&show_icons=true&theme=transparent" alt="GitHub Stats" height="150">
+  <img src="https://github-readme-stats.vercel.app/api?username=sabrinamiao&show_icons=true&theme=transparent" alt="GitHub Stats" height="150">
 </p>

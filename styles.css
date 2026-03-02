@@ -228,6 +228,79 @@ h2 {
   font-size: 0.92rem;
 }
 
+.consent-banner {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 40;
+  width: min(560px, calc(100% - 2rem));
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-elevated);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.consent-banner[hidden] {
+  display: none;
+}
+
+.consent-banner p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.consent-status {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.consent-status[data-state="error"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.consent-actions .btn {
+  cursor: pointer;
+}
+
+.consent-actions [data-consent-reject] {
+  color: var(--text);
+  border-color: var(--text-muted);
+  background: var(--bg);
+}
+
+.consent-actions [data-consent-reject]:hover {
+  border-color: var(--text);
+}
+
+.consent-manage {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.consent-manage:hover {
+  color: var(--text);
+}
+
 @media (max-width: 940px) {
   .hero-grid,
   .projects-grid {
@@ -253,5 +326,16 @@ h2 {
 
   .hero {
     padding-top: 3.4rem;
+  }
+
+  .consent-manage,
+  .consent-banner {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+
+  .consent-manage {
+    bottom: 5.2rem;
   }
 }

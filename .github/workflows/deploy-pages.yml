@@ -27,6 +27,32 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Inject Firebase API key
+        env:
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+        run: |
+          if [ -z "$FIREBASE_API_KEY" ]; then
+            echo "Missing repository secret: FIREBASE_API_KEY"
+            exit 1
+          fi
+
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          file_path = Path("index.html")
+          placeholder = "__FIREBASE_API_KEY__"
+          content = file_path.read_text(encoding="utf-8")
+
+          if placeholder not in content:
+            raise SystemExit("Placeholder __FIREBASE_API_KEY__ not found in index.html")
+
+          file_path.write_text(
+            content.replace(placeholder, os.environ["FIREBASE_API_KEY"]),
+            encoding="utf-8",
+          )
+          PY
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

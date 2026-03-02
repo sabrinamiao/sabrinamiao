@@ -7,7 +7,7 @@
       name="description"
       content="Sabrina's portfolio: cross-platform developer focused on React Native, Electron, and modern web apps."
     />
-    <meta name="firebase-api-key" content="" />
+    <meta name="firebase-api-key" content="__FIREBASE_API_KEY__" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/" />
     <meta property="og:type" content="website" />
@@ -44,28 +44,277 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+    <script>
+      const ANALYTICS_CONSENT_KEY = "analytics-consent";
+      const ANALYTICS_CONSENT_SYNCED_KEY = "analytics-consent-synced";
+      const CONSENT_ID_KEY = "consent-id";
+      const CONSENT_ACCEPTED = "accepted";
+      const CONSENT_REJECTED = "rejected";
+      const CONSENT_DEBUG_ENABLED =
+        new URLSearchParams(window.location.search).get("consentDebug") === "1";
 
       const firebaseApiKey = document
         .querySelector('meta[name="firebase-api-key"]')
         ?.content?.trim();
 
-      if (firebaseApiKey) {
-        const firebaseConfig = {
-          apiKey: firebaseApiKey,
-          authDomain: "portfolio-github-907e6.firebaseapp.com",
-          projectId: "portfolio-github-907e6",
-          storageBucket: "portfolio-github-907e6.firebasestorage.app",
-          messagingSenderId: "369437785824",
-          appId: "1:369437785824:web:d0606427d4905cc4c51a85",
-          measurementId: "G-WNY36PT3YD",
-        };
+      const firebaseConfig = {
+        apiKey: firebaseApiKey,
+        authDomain: "portfolio-github-907e6.firebaseapp.com",
+        projectId: "portfolio-github-907e6",
+        storageBucket: "portfolio-github-907e6.firebasestorage.app",
+        messagingSenderId: "369437785824",
+        appId: "1:369437785824:web:d0606427d4905cc4c51a85",
+        measurementId: "G-WNY36PT3YD",
+      };
 
-        const app = initializeApp(firebaseConfig);
-        getAnalytics(app);
-      }
+      let analyticsInitialized = false;
+      let firebaseAppPromise;
+      let consentStatusElement;
+
+      const setConsentStatus = (message, isError = false) => {
+        if (!consentStatusElement || !CONSENT_DEBUG_ENABLED) {
+          return;
+        }
+
+        consentStatusElement.hidden = false;
+        consentStatusElement.textContent = message;
+        consentStatusElement.dataset.state = isError ? "error" : "info";
+      };
+
+      const getConsentId = () => {
+        try {
+          const existingConsentId = localStorage.getItem(CONSENT_ID_KEY);
+          if (existingConsentId) {
+            return existingConsentId;
+          }
+
+          const generatedConsentId =
+            typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+              ? crypto.randomUUID()
+              : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+
+          localStorage.setItem(CONSENT_ID_KEY, generatedConsentId);
+          return generatedConsentId;
+        } catch {
+          return "consent-id-unavailable";
+        }
+      };
+
+      const getFirebaseApp = async () => {
+        if (!firebaseApiKey) {
+          return null;
+        }
+
+        if (!firebaseAppPromise) {
+          firebaseAppPromise = import(
+            "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js"
+          ).then(({ getApps, getApp, initializeApp }) => {
+            if (getApps().length) {
+              return getApp();
+            }
+
+            return initializeApp(firebaseConfig);
+          });
+        }
+
+        return firebaseAppPromise;
+      };
+
+      const getConsent = () => {
+        try {
+          return localStorage.getItem(ANALYTICS_CONSENT_KEY);
+        } catch {
+          return null;
+        }
+      };
+
+      const setConsent = (decision) => {
+        try {
+          localStorage.setItem(ANALYTICS_CONSENT_KEY, decision);
+          localStorage.removeItem(ANALYTICS_CONSENT_SYNCED_KEY);
+        } catch {
+          return;
+        }
+      };
+
+      const isConsentSynced = () => {
+        try {
+          return localStorage.getItem(ANALYTICS_CONSENT_SYNCED_KEY) === "1";
+        } catch {
+          return false;
+        }
+      };
+
+      const markConsentSynced = () => {
+        try {
+          localStorage.setItem(ANALYTICS_CONSENT_SYNCED_KEY, "1");
+        } catch {
+          return;
+        }
+      };
+
+      const initializeAnalytics = async () => {
+        if (analyticsInitialized || !firebaseApiKey) {
+          return;
+        }
+
+        try {
+          const [app, { getAnalytics, isSupported }] = await Promise.all([
+            getFirebaseApp(),
+            import("https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js"),
+          ]);
+
+          if (app && (await isSupported())) {
+            getAnalytics(app);
+            analyticsInitialized = true;
+          }
+        } catch {
+          return;
+        }
+      };
+
+      const saveConsentDecision = async (decision) => {
+        if (!firebaseApiKey) {
+          return { ok: false, reason: "missing-firebase-api-key" };
+        }
+
+        try {
+          const [app, { getFirestore, collection, addDoc, serverTimestamp }] =
+            await Promise.all([
+              getFirebaseApp(),
+              import("https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js"),
+            ]);
+
+          if (!app) {
+              return { ok: false, reason: "firebase-app-unavailable" };
+          }
+
+          const db = getFirestore(app);
+          await addDoc(collection(db, "consent_decisions"), {
+            consentId: getConsentId(),
+            decision,
+            page: window.location.pathname,
+            decidedAtClient: new Date().toISOString(),
+            decidedAtServer: serverTimestamp(),
+          });
+          return { ok: true };
+        } catch (error) {
+          return {
+            ok: false,
+            reason: error instanceof Error ? error.message : "unknown-firestore-error",
+          };
+        }
+      };
+
+      const syncExistingConsentIfNeeded = async () => {
+        const existingConsent = getConsent();
+        if (!existingConsent || isConsentSynced()) {
+          return;
+        }
+
+        const result = await saveConsentDecision(existingConsent);
+        if (result.ok) {
+          markConsentSynced();
+          setConsentStatus(`Synced existing \"${existingConsent}\" consent to Firestore.`);
+          return;
+        }
+
+        setConsentStatus(
+          `Could not sync existing consent: ${result.reason}.`,
+          true
+        );
+      };
+
+      const hideConsentBanner = () => {
+        const banner = document.querySelector("[data-consent-banner]");
+        if (banner) {
+          banner.hidden = true;
+        }
+      };
+
+      const showConsentBanner = () => {
+        const banner = document.querySelector("[data-consent-banner]");
+        if (banner) {
+          banner.hidden = false;
+        }
+      };
+
+      const applyConsent = async (decision) => {
+        setConsent(decision);
+        hideConsentBanner();
+
+        try {
+          setConsentStatus(`Saving \"${decision}\" consent to Firestore...`);
+          const saveResult = await saveConsentDecision(decision);
+
+          if (saveResult.ok) {
+            markConsentSynced();
+            setConsentStatus(`Saved \"${decision}\" consent to Firestore.`);
+          } else {
+            setConsentStatus(
+              `Failed to save \"${decision}\" consent to Firestore: ${saveResult.reason}.`,
+              true
+            );
+          }
+
+          if (decision === CONSENT_ACCEPTED) {
+            await initializeAnalytics();
+          }
+        } catch {
+          setConsentStatus("Unexpected consent error. See browser console.", true);
+          return;
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const acceptButton = document.querySelector("[data-consent-accept]");
+          const rejectButton = document.querySelector("[data-consent-reject]");
+          const manageButton = document.querySelector("[data-consent-manage]");
+          consentStatusElement = document.querySelector("[data-consent-status]");
+
+          if (consentStatusElement) {
+            consentStatusElement.hidden = !CONSENT_DEBUG_ENABLED;
+            if (CONSENT_DEBUG_ENABLED) {
+              setConsentStatus("Consent debug mode enabled.");
+            }
+          }
+
+          if (manageButton) {
+            manageButton.hidden = false;
+          }
+
+          acceptButton?.addEventListener("click", () => {
+            void applyConsent(CONSENT_ACCEPTED);
+          });
+
+          rejectButton?.addEventListener("click", () => {
+            void applyConsent(CONSENT_REJECTED);
+          });
+
+          manageButton?.addEventListener("click", () => {
+            showConsentBanner();
+          });
+
+          const currentConsent = getConsent();
+          await syncExistingConsentIfNeeded();
+
+          if (currentConsent === CONSENT_ACCEPTED) {
+            hideConsentBanner();
+            await initializeAnalytics();
+            return;
+          }
+
+          if (currentConsent === CONSENT_REJECTED) {
+            hideConsentBanner();
+            return;
+          }
+
+          showConsentBanner();
+        } catch {
+          return;
+        }
+      });
     </script>
     <script type="application/ld+json">
       {
@@ -274,5 +523,21 @@
         <p>© 2026 Sabrina Miao</p>
       </div>
     </footer>
+
+    <section class="consent-banner" data-consent-banner hidden aria-label="Cookie consent" role="dialog" aria-live="polite">
+      <p>
+        This site uses optional analytics cookies to understand traffic and improve the
+        portfolio. You can accept or reject analytics.
+      </p>
+      <div class="consent-actions">
+        <button class="btn btn-primary" type="button" data-consent-accept>Accept</button>
+        <button class="btn btn-secondary" type="button" data-consent-reject>Reject</button>
+      </div>
+      <p class="consent-status" data-consent-status hidden></p>
+    </section>
+
+    <button class="consent-manage" type="button" data-consent-manage hidden>
+      Privacy settings
+    </button>
   </body>
 </html>

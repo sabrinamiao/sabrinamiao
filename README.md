@@ -4,7 +4,11 @@
   <img src="https://img.shields.io/badge/Stockholm-SE-blue?style=flat-square&logo=googlemaps&logoColor=white" alt="Location">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue">
   <img src="https://img.shields.io/github/followers/sabrinamiao?label=Followers&style=flat-square" alt="GitHub Followers">
   <img src="https://img.shields.io/github/last-commit/sabrinamiao/sabrinamiao?label=Last%20Commit&style=flat-square" alt="Last Commit">
 </p>

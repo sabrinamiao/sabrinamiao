@@ -30,3 +30,8 @@
 ### 📫 Reach Me
 * **GitHub:** Open an issue or PR on one of my repos.
 * **Status:** Currently balancing full-time work and family; expect highly efficient, async communication.
+
+---
+
+### 🌐 Portfolio Page
+* Open `index.html` in your browser to view a single-page portfolio site.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sabrinamiao.github.io/sabrinamiao/sitemap.xml

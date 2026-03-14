@@ -33,5 +33,10 @@
 
 ---
 
+### 🤖 AI-driven Development
+
+I use AI as an assistive tool across design and engineering for rapid prototyping, automated refactors, and documentation generation. All AI-generated suggestions are reviewed, tested, and adapted to the project — sensitive data is never shared with third-party models. Open an issue if you'd like details about my AI-assisted workflow or collaboration guidelines.
+
+
 ### 🌐 Portfolio Page
 https://sabrinamiao.github.io/sabrinamiao/

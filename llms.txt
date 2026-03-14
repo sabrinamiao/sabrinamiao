@@ -1,0 +1,14 @@
+Sabrina Miao
+Title: Cross-Platform Developer
+Location: Stockholm, Sweden
+Portfolio: https://sabrinamiao.github.io/sabrinamiao/
+GitHub: https://github.com/sabrinamiao
+
+PrimarySkills: TypeScript, React, React Native, Electron, Node.js, Next.js, Vue
+SecondarySkills: Native modules, hardware integration, CI/CD, testing, accessibility, documentation
+
+Keywords: cross-platform, mobile, desktop, web, TypeScript, React, React Native, Electron, Next.js, Node.js, open-source, maintainer, prototyping, prompt-engineering
+
+AIWorkflow: AI is used to augment ideation, prototyping, and documentation; all AI-generated suggestions are human-reviewed, tested, and version-controlled.
+
+Contact: Open an issue or PR on GitHub or visit the portfolio for more details.

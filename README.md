@@ -11,13 +11,16 @@
   <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue">
   <img src="https://img.shields.io/github/followers/sabrinamiao?label=Followers&style=flat-square" alt="GitHub Followers">
   <img src="https://img.shields.io/github/last-commit/sabrinamiao/sabrinamiao?label=Last%20Commit&style=flat-square" alt="Last Commit">
+  <img src="https://github.com/sabrinamiao/sabrinamiao/actions/workflows/deploy-pages.yml/badge.svg" alt="Deploy Status">
 </p>
+
+**🌐 Portfolio:** [sabrinamiao.github.io/sabrinamiao](https://sabrinamiao.github.io/sabrinamiao/)
 
 ---
 
 ## 🔭 Current Focus
 * **Hobby Projects:** Building cross-platform experiences using **React Native** and **Electron**.
-* **Learning:** Deep-diving into native modules and hardware integration within the React Native ecosystem.
+* **Learning:** Deep-diving into native modules and hardware integration within the React Native ecosystem, plus CI/CD, testing, and accessibility practices.
 
 ## 🛠 Tech Stack
 | Category | Tools |
@@ -36,7 +39,3 @@
 ## 🤖 AI-driven Development
 
 I use AI as an assistive tool across design and engineering for rapid prototyping, automated refactors, and documentation generation. All AI-generated suggestions are reviewed, tested, and adapted to the project — sensitive data is never shared with third-party models. Open an issue if you'd like details about my AI-assisted workflow or collaboration guidelines.
-
-
-## 🌐 Portfolio Page
-https://sabrinamiao.github.io/sabrinamiao/

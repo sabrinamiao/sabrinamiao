@@ -15,11 +15,11 @@
 
 ---
 
-### 🔭 Current Focus
+## 🔭 Current Focus
 * **Hobby Projects:** Building cross-platform experiences using **React Native** and **Electron**.
 * **Learning:** Deep-diving into native modules and hardware integration within the React Native ecosystem.
 
-### 🛠 Tech Stack
+## 🛠 Tech Stack
 | Category | Tools |
 | :--- | :--- |
 | **Frontend/Web** | TypeScript, React, Next.js, Vue |
@@ -27,16 +27,16 @@
 | **Desktop** | Electron |
 | **Backend** | Node.js, Next.js (SSR) |
 
-### 📫 Reach Me
+## 📫 Reach Me
 * **GitHub:** Open an issue or PR on one of my repos.
 * **Status:** Currently balancing full-time work and family; expect highly efficient, async communication.
 
 ---
 
-### 🤖 AI-driven Development
+## 🤖 AI-driven Development
 
 I use AI as an assistive tool across design and engineering for rapid prototyping, automated refactors, and documentation generation. All AI-generated suggestions are reviewed, tested, and adapted to the project — sensitive data is never shared with third-party models. Open an issue if you'd like details about my AI-assisted workflow or collaboration guidelines.
 
 
-### 🌐 Portfolio Page
+## 🌐 Portfolio Page
 https://sabrinamiao.github.io/sabrinamiao/

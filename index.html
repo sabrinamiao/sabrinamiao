@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -325,7 +325,7 @@
             "name": "Sabrina Miao",
             "url": "https://sabrinamiao.github.io/sabrinamiao/",
             "jobTitle": "Cross-Platform Developer",
-            "sameAs": ["https://github.com/sabrinamiao"],
+            "sameAs": ["https://github.com/sabrinamiao", "https://medium.com/@sabrinamsh"],
             "knowsAbout": [
               "React Native",
               "Electron",
@@ -386,6 +386,36 @@
                 "description": "A party-ready movie guessing game inspired by in-office fun. Perfect ice breaker for gatherings and social events — no movie buff required."
               }
             ]
+          },
+          {
+            "@type": "ItemList",
+            "name": "Writing",
+            "itemListElement": [
+              {
+                "@type": "BlogPosting",
+                "headline": "Do We Really Need the Most Advanced AI Models for Everyday Development?",
+                "url": "https://medium.com/@sabrinamsh/do-we-really-need-the-most-advanced-ai-models-for-everyday-development-6ef76b31880a",
+                "author": "Sabrina Miao"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "The Hidden ROI of AI Refactoring: Why Big-Bang Legacy Upgrades Fail",
+                "url": "https://medium.com/@sabrinamsh/the-hidden-roi-of-ai-refactoring-why-big-bang-legacy-upgrades-fail-b935896bffda",
+                "author": "Sabrina Miao"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Beyond Prompt Engineering: Why Production AI Needs Feedback Loops, Not Better Prompts",
+                "url": "https://medium.com/@sabrinamsh/beyond-prompt-engineering-why-production-ai-needs-feedback-loops-not-better-prompts-7052b566ba8b",
+                "author": "Sabrina Miao"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Beyond Coding: How I Built an AI Harness to Automate My Development Lifecycle",
+                "url": "https://medium.com/@sabrinamsh/beyond-coding-how-i-built-an-ai-harness-to-automate-my-development-lifecycle-77ea5e1788de",
+                "author": "Sabrina Miao"
+              }
+            ]
           }
         ]
       }
@@ -395,12 +425,16 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="#top" aria-label="Sabrina Miao home">
-          <img src="images/logo.jpeg" alt="Sabrina Miao logo" />
+          <span class="brand-mark">
+            <img src="images/logo.jpeg" alt="" />
+          </span>
+          <span class="brand-name">Sabrina<span class="dot">.</span></span>
         </a>
         <nav>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#writing">Writing</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -411,15 +445,19 @@
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">Stockholm, Sweden</p>
-            <h1>Building fast, thoughtful apps across mobile, desktop, and web.</h1>
+            <h1>
+              Hi, my name is <span class="accent">Sabrina</span><br />
+              I build cross-platform apps.
+            </h1>
             <p class="lead">
-              I’m Sabrina, a developer focused on cross-platform product experiences with
+              I’m a developer focused on cross-platform product experiences with
               React Native, Electron, and TypeScript.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">View Projects</a>
               <a class="btn btn-secondary" href="https://github.com/sabrinamiao" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
+            <div class="scroll-cue" aria-hidden="true"></div>
           </div>
           <aside class="hero-card">
             <h2>Current Focus</h2>
@@ -434,17 +472,42 @@
 
       <section id="about" class="section">
         <div class="container">
-          <h2>About</h2>
-          <p>
-            I care about quality, speed, and clear user experiences. I enjoy solving product
-            problems that span device boundaries and technical layers.
-          </p>
+          <div class="section-heading">
+            <p class="section-index">01</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">About</span>
+              <span>About</span>
+            </h2>
+          </div>
+          <div class="about-grid">
+            <p>
+              I care about quality, speed, and clear user experiences. I enjoy solving product
+              problems that span device boundaries and technical layers.
+            </p>
+            <div class="code-card">
+              <p class="visually-hidden">
+                Quick facts: Location — Stockholm, Sweden. Focus — React Native, Electron,
+                TypeScript. Mission — ship fast, thoughtful apps.
+              </p>
+              <pre aria-hidden="true"><code><span class="token-kw">class</span> <span class="token-class">Sabrina</span> {
+  <span class="token-prop">location</span> = <span class="token-str">'Stockholm, Sweden'</span>;
+  <span class="token-prop">focus</span> = [<span class="token-str">'React Native'</span>, <span class="token-str">'Electron'</span>, <span class="token-str">'TypeScript'</span>];
+  <span class="token-prop">mission</span> = <span class="token-str">'ship fast, thoughtful apps'</span>;
+}</code></pre>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="skills" class="section section-alt">
         <div class="container">
-          <h2>Tech Stack</h2>
+          <div class="section-heading">
+            <p class="section-index">02</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">Skills</span>
+              <span>Tech Stack</span>
+            </h2>
+          </div>
           <div class="skills-grid">
             <article>
               <h3>Frontend / Web</h3>
@@ -468,9 +531,15 @@
 
       <section id="projects" class="section">
         <div class="container">
-          <h2>Featured Projects</h2>
+          <div class="section-heading">
+            <p class="section-index">03</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">Work</span>
+              <span>Featured Projects</span>
+            </h2>
+          </div>
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card" data-index="01">
               <h3>
                 <a href="https://swedishoftheday.se/" target="_blank" rel="noopener noreferrer">
                   SWOD - Swedish Word of the Day
@@ -482,7 +551,7 @@
               </p>
               <span>React Native · TypeScript</span>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-index="02">
               <h3>
                 <a href="https://watt-wise-190d9.web.app/" target="_blank" rel="noopener noreferrer">
                   Flow Watt
@@ -494,7 +563,7 @@
               </p>
               <span>React Native · TypeScript</span>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-index="03">
               <h3>Smart Fridge</h3>
               <p>
                 Helps manage fridge inventory and reduce food waste by tracking items and
@@ -502,7 +571,7 @@
               </p>
               <span>React Native · TypeScript</span>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-index="04">
               <h3>Smart-Board</h3>
               <p>
                 All family information in one board, built with Electron to centralize schedules,
@@ -510,7 +579,7 @@
               </p>
               <span>Electron · Node.js</span>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-index="05">
               <h3>
                 <a href="https://guess-what-movie.web.app/" target="_blank" rel="noopener noreferrer">
                   Guess What - Movie
@@ -527,9 +596,94 @@
         </div>
       </section>
 
+      <section id="writing" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-index">04</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">Writing</span>
+              <span>Writing</span>
+            </h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-index="01">
+              <h3>
+                <a
+                  href="https://medium.com/@sabrinamsh/do-we-really-need-the-most-advanced-ai-models-for-everyday-development-6ef76b31880a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Do We Really Need the Most Advanced AI Models for Everyday Development?
+                </a>
+              </h3>
+              <p>
+                A look at when lightweight, cost-effective AI models are enough for day-to-day
+                coding tasks — and when reaching for the biggest model is overkill.
+              </p>
+              <span>Medium · AI Tooling</span>
+            </article>
+            <article class="project-card" data-index="02">
+              <h3>
+                <a
+                  href="https://medium.com/@sabrinamsh/the-hidden-roi-of-ai-refactoring-why-big-bang-legacy-upgrades-fail-b935896bffda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Hidden ROI of AI Refactoring: Why Big-Bang Legacy Upgrades Fail
+                </a>
+              </h3>
+              <p>
+                Why incremental, AI-assisted refactors consistently outperform all-at-once
+                legacy rewrites, and how to measure the return on that investment.
+              </p>
+              <span>Medium · Legacy Modernization</span>
+            </article>
+            <article class="project-card" data-index="03">
+              <h3>
+                <a
+                  href="https://medium.com/@sabrinamsh/beyond-prompt-engineering-why-production-ai-needs-feedback-loops-not-better-prompts-7052b566ba8b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Beyond Prompt Engineering: Why Production AI Needs Feedback Loops, Not Better
+                  Prompts
+                </a>
+              </h3>
+              <p>
+                Prompt tweaking only goes so far — production AI systems need structured
+                feedback loops to keep improving over time.
+              </p>
+              <span>Medium · AI in Production</span>
+            </article>
+            <article class="project-card" data-index="04">
+              <h3>
+                <a
+                  href="https://medium.com/@sabrinamsh/beyond-coding-how-i-built-an-ai-harness-to-automate-my-development-lifecycle-77ea5e1788de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Beyond Coding: How I Built an AI Harness to Automate My Development Lifecycle
+                </a>
+              </h3>
+              <p>
+                A walkthrough of the AI harness I built to automate testing, review, and
+                delivery steps across my development workflow.
+              </p>
+              <span>Medium · Developer Workflow</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="ai" class="section section-alt">
         <div class="container">
-          <h2>AI-driven Development</h2>
+          <div class="section-heading">
+            <p class="section-index">05</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">AI</span>
+              <span>AI-driven Development</span>
+            </h2>
+          </div>
           <p>
             I use AI as an augmenting tool throughout the product and engineering lifecycle — for
             ideation, prototyping, documentation, and automation. AI accelerates iteration,
@@ -548,7 +702,13 @@
 
       <section id="contact" class="section section-alt">
         <div class="container contact">
-          <h2>Contact</h2>
+          <div class="section-heading">
+            <p class="section-index">06</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">Contact</span>
+              <span>Contact</span>
+            </h2>
+          </div>
           <p>Open an issue or PR on one of my GitHub repositories.</p>
           <a class="btn btn-primary" href="https://github.com/sabrinamiao" target="_blank" rel="noopener noreferrer">
             Connect on GitHub

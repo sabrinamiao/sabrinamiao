@@ -13,6 +13,12 @@
     <meta property="og:description" content="How Smart Fridge tackles food-waste risk with inventory visibility and expiry-aware UX." />
     <meta property="og:url" content="https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html" />
     <meta property="og:image" content="https://sabrinamiao.github.io/sabrinamiao/images/projects/smart-fridge-preview.jpg" />
+    <meta property="og:image:alt" content="Smart Fridge project preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Smart Fridge Case Study | Sabrina Miao" />
+    <meta name="twitter:description" content="How Smart Fridge tackles food-waste risk with inventory visibility and expiry-aware UX." />
+    <meta name="twitter:image" content="https://sabrinamiao.github.io/sabrinamiao/images/projects/smart-fridge-preview.jpg" />
+    <meta name="twitter:image:alt" content="Smart Fridge project preview" />
     <title>Smart Fridge Case Study | Sabrina Miao</title>
     <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
     <link rel="stylesheet" href="../styles.css" />
@@ -40,6 +46,28 @@
             "applicationCategory": "LifestyleApplication",
             "programmingLanguage": "TypeScript",
             "description": "Mobile inventory management project that helps households track food usage windows and reduce waste."
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://sabrinamiao.github.io/sabrinamiao/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Case Studies",
+                "item": "https://sabrinamiao.github.io/sabrinamiao/case-studies/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Smart Fridge"
+              }
+            ]
           }
         ]
       }
@@ -86,9 +114,11 @@
                 <li><strong>Scope:</strong> Inventory entry, status tracking, and use-soon prioritization.</li>
                 <li><strong>Timeline:</strong> App repo created 2024-11-11; backend repo created 2025-05-05; both maintained through 2026.</li>
                 <li><strong>Stack:</strong> React Native, TypeScript, Node.js API.</li>
+                <li><strong>Release surfaces:</strong> Mobile app architecture with a separate backend service for content and inventory state.</li>
                 <li><strong>Constraints:</strong> Fast item input on mobile and low-friction daily maintenance.</li>
                 <li><strong>Technical decisions:</strong> Typed item states and expiry fields to support predictable filtering and reminders.</li>
-                <li><strong>Results:</strong> Working private codebase with app and API separation, enabling incremental delivery of inventory features.</li>
+                <li><strong>Results:</strong> 2-repository architecture (app + API), explicit lifecycle states for active/use-soon/expired items, and an implementation timeline spanning 2024-2026.</li>
+                <li><strong>Public metrics note:</strong> User/download counts are not published; this page reports only verifiable implementation scope.</li>
               </ul>
             </article>
             <aside class="detail-card">

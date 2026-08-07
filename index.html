@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sabrina's portfolio: cross-platform developer focused on React Native, Electron, and modern web apps."
+      content="Sabrina Miao is a cross-platform developer in Stockholm specializing in React Native, Electron, and TypeScript with project case studies and technical writing."
     />
     <meta name="firebase-api-key" content="__FIREBASE_API_KEY__" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sabrina Miao | Portfolio" />
+    <meta
+      property="og:title"
+      content="Sabrina Miao - Cross-Platform Developer | React Native, Electron & TypeScript"
+    />
     <meta
       property="og:description"
-      content="Cross-platform developer focused on React Native, Electron, and modern web apps."
+      content="Case studies and technical writing from Sabrina Miao, a cross-platform developer building React Native, Electron, and TypeScript products."
     />
     <meta property="og:url" content="https://sabrinamiao.github.io/sabrinamiao/" />
     <meta property="og:site_name" content="Sabrina Miao Portfolio" />
     <meta
       property="og:image"
-      content="https://sabrinamiao.github.io/sabrinamiao/assets/og-image.svg"
+      content="https://sabrinamiao.github.io/sabrinamiao/images/og-image.png"
     />
     <meta property="og:image:alt" content="Sabrina Miao portfolio preview" />
-    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sabrina Miao | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Sabrina Miao - Cross-Platform Developer | React Native, Electron & TypeScript"
+    />
     <meta
       name="twitter:description"
-      content="Cross-platform developer focused on React Native, Electron, and modern web apps."
+      content="Case studies and technical writing from Sabrina Miao, a cross-platform developer building React Native, Electron, and TypeScript products."
     />
     <meta
       name="twitter:image"
-      content="https://sabrinamiao.github.io/sabrinamiao/assets/og-image.svg"
+      content="https://sabrinamiao.github.io/sabrinamiao/images/og-image.png"
     />
     <meta name="twitter:image:alt" content="Sabrina Miao portfolio preview" />
-    <title>Sabrina | Portfolio</title>
+    <title>Sabrina Miao - Cross-Platform Developer | React Native, Electron & TypeScript</title>
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
     <script>
       const ANALYTICS_CONSENT_KEY = "analytics-consent";
@@ -321,11 +323,19 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#person",
             "@type": "Person",
             "name": "Sabrina Miao",
             "url": "https://sabrinamiao.github.io/sabrinamiao/",
             "jobTitle": "Cross-Platform Developer",
+            "description": "Cross-platform developer based in Stockholm, Sweden, specializing in React Native, Electron, and TypeScript.",
+            "image": "https://sabrinamiao.github.io/sabrinamiao/images/logo.jpeg",
             "sameAs": ["https://github.com/sabrinamiao", "https://medium.com/@sabrinamsh"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "professional inquiries",
+              "url": "https://github.com/sabrinamiao"
+            },
             "knowsAbout": [
               "React Native",
               "Electron",
@@ -340,80 +350,163 @@
             }
           },
           {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#website",
             "@type": "WebSite",
             "name": "Sabrina Miao Portfolio",
             "url": "https://sabrinamiao.github.io/sabrinamiao/",
             "inLanguage": "en"
           },
           {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#webpage",
+            "@type": "WebPage",
+            "url": "https://sabrinamiao.github.io/sabrinamiao/",
+            "name": "Sabrina Miao - Cross-Platform Developer",
+            "isPartOf": {
+              "@id": "https://sabrinamiao.github.io/sabrinamiao/#website"
+            },
+            "mainEntity": {
+              "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+            },
+            "description": "Portfolio homepage with project case studies and technical writing by Sabrina Miao.",
+            "inLanguage": "en"
+          },
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#projects",
             "@type": "ItemList",
             "name": "Featured Projects",
             "itemListElement": [
               {
-                "@type": "SoftwareApplication",
-                "name": "SWOD - Swedish Word of the Day",
-                "applicationCategory": "EducationalApplication",
-                "operatingSystem": "Android, iOS",
-                "url": "https://swedishoftheday.se/",
-                "description": "Random Swedish word or short phrase with translations and usage examples in English, Swedish, and Chinese."
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": ["CreativeWork", "SoftwareApplication"],
+                  "name": "SWOD - Swedish Word of the Day",
+                  "applicationCategory": "EducationalApplication",
+                  "operatingSystem": "Android, iOS",
+                  "url": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html",
+                  "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/swod-preview.jpg",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  },
+                  "description": "Mobile language-learning project focused on one Swedish term per day with examples and multilingual support."
+                }
               },
               {
-                "@type": "SoftwareApplication",
-                "name": "Flow Watt",
-                "applicationCategory": "UtilityApplication",
-                "operatingSystem": "Android, iOS",
-                "url": "https://watt-wise-190d9.web.app/",
-                "description": "Mobile app for tracking and visualizing energy-related data with a clear mobile-first user experience."
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": ["CreativeWork", "SoftwareApplication"],
+                  "name": "Flow Watt",
+                  "applicationCategory": "UtilityApplication",
+                  "operatingSystem": "Android, iOS",
+                  "url": "https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html",
+                  "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/flow-watt-preview.jpg",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  },
+                  "description": "Cross-platform energy tracking app with clear data visualization and reusable mobile UI patterns."
+                }
               },
               {
-                "@type": "SoftwareApplication",
-                "name": "Smart Fridge",
-                "applicationCategory": "LifestyleApplication",
-                "description": "Helps manage fridge inventory and reduce food waste by tracking items and improving visibility into what to use first."
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": ["CreativeWork", "SoftwareApplication"],
+                  "name": "Smart Fridge",
+                  "applicationCategory": "LifestyleApplication",
+                  "url": "https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html",
+                  "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/smart-fridge-preview.jpg",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  },
+                  "description": "Inventory-focused mobile app that helps households track expiry windows and reduce avoidable food waste."
+                }
               },
               {
-                "@type": "SoftwareApplication",
-                "name": "Smart-Board",
-                "applicationCategory": "ProductivityApplication",
-                "operatingSystem": "Windows, macOS, Linux",
-                "description": "Electron-based family dashboard to centralize schedules, reminders, and daily updates."
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": ["CreativeWork", "SoftwareApplication"],
+                  "name": "Smart-Board",
+                  "applicationCategory": "ProductivityApplication",
+                  "operatingSystem": "Windows, macOS, Linux",
+                  "url": "https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html",
+                  "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/smart-board-preview.jpg",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  },
+                  "description": "Electron family dashboard for shared planning, reminders, and at-a-glance daily operations."
+                }
               },
               {
-                "@type": "SoftwareApplication",
-                "name": "Guess What - Movie",
-                "applicationCategory": "GameApplication",
-                "url": "https://guess-what-movie.web.app/",
-                "description": "A party-ready movie guessing game inspired by in-office fun. Perfect ice breaker for gatherings and social events — no movie buff required."
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": ["CreativeWork", "SoftwareApplication"],
+                  "name": "Guess What - Movie",
+                  "applicationCategory": "GameApplication",
+                  "url": "https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html",
+                  "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/guess-what-movie-preview.jpg",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  },
+                  "description": "Social movie guessing game designed for fast multiplayer rounds and low-friction setup."
+                }
               }
             ]
           },
           {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#writing",
             "@type": "ItemList",
             "name": "Writing",
             "itemListElement": [
               {
-                "@type": "BlogPosting",
-                "headline": "Do We Really Need the Most Advanced AI Models for Everyday Development?",
-                "url": "https://medium.com/@sabrinamsh/do-we-really-need-the-most-advanced-ai-models-for-everyday-development-6ef76b31880a",
-                "author": "Sabrina Miao"
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "BlogPosting",
+                  "headline": "Do We Really Need the Most Advanced AI Models for Everyday Development?",
+                  "url": "https://medium.com/@sabrinamsh/do-we-really-need-the-most-advanced-ai-models-for-everyday-development-6ef76b31880a",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  }
+                }
               },
               {
-                "@type": "BlogPosting",
-                "headline": "The Hidden ROI of AI Refactoring: Why Big-Bang Legacy Upgrades Fail",
-                "url": "https://medium.com/@sabrinamsh/the-hidden-roi-of-ai-refactoring-why-big-bang-legacy-upgrades-fail-b935896bffda",
-                "author": "Sabrina Miao"
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "BlogPosting",
+                  "headline": "The Hidden ROI of AI Refactoring: Why Big-Bang Legacy Upgrades Fail",
+                  "url": "https://medium.com/@sabrinamsh/the-hidden-roi-of-ai-refactoring-why-big-bang-legacy-upgrades-fail-b935896bffda",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  }
+                }
               },
               {
-                "@type": "BlogPosting",
-                "headline": "Beyond Prompt Engineering: Why Production AI Needs Feedback Loops, Not Better Prompts",
-                "url": "https://medium.com/@sabrinamsh/beyond-prompt-engineering-why-production-ai-needs-feedback-loops-not-better-prompts-7052b566ba8b",
-                "author": "Sabrina Miao"
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "BlogPosting",
+                  "headline": "Beyond Prompt Engineering: Why Production AI Needs Feedback Loops, Not Better Prompts",
+                  "url": "https://medium.com/@sabrinamsh/beyond-prompt-engineering-why-production-ai-needs-feedback-loops-not-better-prompts-7052b566ba8b",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  }
+                }
               },
               {
-                "@type": "BlogPosting",
-                "headline": "Beyond Coding: How I Built an AI Harness to Automate My Development Lifecycle",
-                "url": "https://medium.com/@sabrinamsh/beyond-coding-how-i-built-an-ai-harness-to-automate-my-development-lifecycle-77ea5e1788de",
-                "author": "Sabrina Miao"
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "BlogPosting",
+                  "headline": "Beyond Coding: How I Built an AI Harness to Automate My Development Lifecycle",
+                  "url": "https://medium.com/@sabrinamsh/beyond-coding-how-i-built-an-ai-harness-to-automate-my-development-lifecycle-77ea5e1788de",
+                  "author": {
+                    "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+                  }
+                }
               }
             ]
           }
@@ -426,14 +519,15 @@
       <div class="container nav">
         <a class="brand" href="#top" aria-label="Sabrina Miao home">
           <span class="brand-mark">
-            <img src="images/logo.jpeg" alt="" />
+            <img src="images/logo.jpeg" alt="" width="40" height="40" loading="eager" decoding="async" />
           </span>
-          <span class="brand-name">Sabrina<span class="dot">.</span></span>
+          <span class="brand-name">Sabrina Miao<span class="dot">.</span></span>
         </a>
         <nav>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#ai">AI</a>
           <a href="#writing">Writing</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -446,12 +540,12 @@
           <div>
             <p class="eyebrow">Stockholm, Sweden</p>
             <h1>
-              Hi, my name is <span class="accent">Sabrina</span><br />
-              I build cross-platform apps.
+              Hi, I'm <span class="accent">Sabrina Miao</span><br />
+              Cross-platform developer for mobile, desktop, and web.
             </h1>
             <p class="lead">
-              I’m a developer focused on cross-platform product experiences with
-              React Native, Electron, and TypeScript.
+              I design and ship React Native, Electron, and TypeScript products with
+              a strong focus on maintainability, evidence-based iteration, and practical UX.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -546,8 +640,12 @@
                 </a>
               </h3>
               <p>
-                Selects a random “Swedish of the Day” (word or short phrase) and shows
-                translations plus usage examples in English, Swedish, and Chinese.
+                Cross-platform language-learning app with one daily Swedish term, multilingual
+                support (EN/SV/ZH), and case-study documentation of architecture decisions.
+              </p>
+              <p class="project-links">
+                <a href="projects/swod.html">Case study</a>
+                <a href="https://swedishoftheday.se/" target="_blank" rel="noopener noreferrer">Live demo</a>
               </p>
               <span>React Native · TypeScript</span>
             </article>
@@ -558,24 +656,40 @@
                 </a>
               </h3>
               <p>
-                React Native product for tracking and visualizing energy-related data with
-                clear mobile-first UX and reusable components.
+                Energy tracking product focused on mobile-first dashboards, chart readability,
+                and reusable TypeScript components across feature screens.
+              </p>
+              <p class="project-links">
+                <a href="projects/flow-watt.html">Case study</a>
+                <a href="https://watt-wise-190d9.web.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
               </p>
               <span>React Native · TypeScript</span>
             </article>
             <article class="project-card" data-index="03">
-              <h3>Smart Fridge</h3>
+              <h3>
+                <a href="projects/smart-fridge.html">Smart Fridge</a>
+              </h3>
               <p>
-                Helps manage fridge inventory and reduce food waste by tracking items and
-                improving visibility into what should be used first.
+                Inventory and expiry management app designed to reduce avoidable food waste with
+                clear prioritization of "use-soon" items.
+              </p>
+              <p class="project-links">
+                <a href="projects/smart-fridge.html">Case study</a>
+                <span>Live demo coming soon</span>
               </p>
               <span>React Native · TypeScript</span>
             </article>
             <article class="project-card" data-index="04">
-              <h3>Smart-Board</h3>
+              <h3>
+                <a href="projects/smart-board.html">Smart-Board</a>
+              </h3>
               <p>
-                All family information in one board, built with Electron to centralize schedules,
-                reminders, and shared daily updates.
+                Electron family operations board centralizing schedules, reminders, and shared
+                updates in one desktop-first interface.
+              </p>
+              <p class="project-links">
+                <a href="projects/smart-board.html">Case study</a>
+                <span>Live demo coming soon</span>
               </p>
               <span>Electron · Node.js</span>
             </article>
@@ -586,20 +700,63 @@
                 </a>
               </h3>
               <p>
-                A movie guessing game inspired by a classic in-office activity. Challenge your
-                friends to identify films from cryptic clues — no spoilers, just laughs. A perfect
-                ice breaker for parties, team hangouts, and casual gatherings.
+                Social movie game optimized for low-friction group play with short rounds,
+                clear prompts, and fast replay for parties and team sessions.
+              </p>
+              <p class="project-links">
+                <a href="projects/guess-what-movie.html">Case study</a>
+                <a href="https://guess-what-movie.web.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
               </p>
               <span>React · TypeScript</span>
             </article>
           </div>
+          <p class="topic-links">
+            Browse all project pages:
+            <a href="projects/swod.html">SWOD</a>,
+            <a href="projects/flow-watt.html">Flow Watt</a>,
+            <a href="projects/smart-fridge.html">Smart Fridge</a>,
+            <a href="projects/smart-board.html">Smart-Board</a>,
+            <a href="projects/guess-what-movie.html">Guess What - Movie</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="case-studies" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-index">04</p>
+            <h2 class="section-title">
+              <span class="ghost" aria-hidden="true">Cases</span>
+              <span>Selected Case Studies</span>
+            </h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-index="A1">
+              <h3><a href="projects/swod.html">SWOD: multilingual product loop</a></h3>
+              <p>Problem: daily vocabulary retention. Audience: language learners. Role: solo developer across product and implementation.</p>
+              <span>Approach: daily content model, tri-language UX, cross-platform release</span>
+            </article>
+            <article class="project-card" data-index="A2">
+              <h3><a href="projects/flow-watt.html">Flow Watt: energy data clarity</a></h3>
+              <p>Problem: energy usage data is difficult to interpret quickly. Audience: households tracking consumption trends.</p>
+              <span>Approach: mobile-first charts, reusable components, iterative UI tests</span>
+            </article>
+            <article class="project-card" data-index="A3">
+              <h3><a href="projects/smart-fridge.html">Smart Fridge: reduce food waste</a></h3>
+              <p>Problem: hidden inventory and missed expiry dates. Audience: shared households.</p>
+              <span>Approach: inventory lifecycle modeling and use-soon prioritization</span>
+            </article>
+          </div>
+          <p class="topic-links">
+            Explore the complete index at <a href="case-studies/index.html">Case Studies</a>.
+          </p>
         </div>
       </section>
 
       <section id="writing" class="section">
         <div class="container">
           <div class="section-heading">
-            <p class="section-index">04</p>
+            <p class="section-index">05</p>
             <h2 class="section-title">
               <span class="ghost" aria-hidden="true">Writing</span>
               <span>Writing</span>
@@ -672,13 +829,17 @@
               <span>Medium · Developer Workflow</span>
             </article>
           </div>
+          <p class="topic-links">
+            Read structured summaries and publication links on
+            <a href="writing/index.html">the writing page</a>.
+          </p>
         </div>
       </section>
 
       <section id="ai" class="section section-alt">
         <div class="container">
           <div class="section-heading">
-            <p class="section-index">05</p>
+            <p class="section-index">06</p>
             <h2 class="section-title">
               <span class="ghost" aria-hidden="true">AI</span>
               <span>AI-driven Development</span>
@@ -703,13 +864,17 @@
       <section id="contact" class="section section-alt">
         <div class="container contact">
           <div class="section-heading">
-            <p class="section-index">06</p>
+            <p class="section-index">07</p>
             <h2 class="section-title">
               <span class="ghost" aria-hidden="true">Contact</span>
               <span>Contact</span>
             </h2>
           </div>
-          <p>Open an issue or PR on one of my GitHub repositories.</p>
+          <p>
+            For collaboration, contact me through GitHub or Medium. Project pages include
+            source/demo links and technical scope for quick review.
+          </p>
+          <a class="btn btn-secondary" href="https://medium.com/@sabrinamsh" target="_blank" rel="noopener noreferrer">Message on Medium</a>
           <a class="btn btn-primary" href="https://github.com/sabrinamiao" target="_blank" rel="noopener noreferrer">
             Connect on GitHub
           </a>

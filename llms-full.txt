@@ -1,0 +1,63 @@
+# Sabrina Miao - Extended Portfolio Summaries
+
+Last updated: 2026-08-07
+Canonical homepage: https://sabrinamiao.github.io/sabrinamiao/
+
+## Profile
+Sabrina Miao is a cross-platform developer based in Stockholm, Sweden.
+Primary specialization: React Native, Electron, and TypeScript product development.
+
+## Project Summaries
+
+### SWOD - Swedish Word of the Day
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/swod.html
+- Demo: https://swedishoftheday.se/
+- Source: https://github.com/sabrinamiao/swod-react
+- Scope: Daily Swedish term delivery with usage support in English, Swedish, and Chinese.
+- Role: Product design and implementation.
+- Stack: React Native, TypeScript, Node.js.
+- Evidence notes: Multiple client implementations and active project maintenance.
+
+### Flow Watt
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html
+- Demo: https://watt-wise-190d9.web.app/
+- Source: https://github.com/sabrinamiao/flow-watt-web
+- Scope: Energy tracking and trend visualization for mobile-first usage.
+- Role: Frontend architecture and delivery.
+- Stack: React Native, React, TypeScript.
+- Evidence notes: Public demo and active repository updates.
+
+### Smart Fridge
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html
+- Source: https://github.com/sabrinamiao/smart-fridge
+- API source: https://github.com/sabrinamiao/smart-fridge-api
+- Scope: Food inventory lifecycle and expiry-aware organization.
+- Role: Solo engineer.
+- Stack: React Native, TypeScript, Node.js.
+- Evidence notes: App and API repositories with ongoing maintenance.
+
+### Smart-Board
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html
+- Source index: https://github.com/sabrinamiao?tab=repositories
+- Scope: Electron-based family planning dashboard.
+- Role: Product concept and implementation.
+- Stack: Electron, Node.js, TypeScript.
+- Evidence notes: Case-study source of truth for architecture and delivery rationale.
+
+### Guess What - Movie
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html
+- Demo: https://guess-what-movie.web.app/
+- Source: https://github.com/sabrinamiao/guess-what-movie
+- Scope: Social movie guessing game for quick group sessions.
+- Role: Product and engineering owner.
+- Stack: React, TypeScript.
+- Evidence notes: Public demo plus active codebase.
+
+## Writing
+- Writing hub: https://sabrinamiao.github.io/sabrinamiao/writing/
+- Medium profile: https://medium.com/@sabrinamsh
+- Topics: AI-assisted software development, incremental modernization, production feedback loops, engineering workflow automation.
+
+## Contact Routes
+- GitHub: https://github.com/sabrinamiao
+- Medium: https://medium.com/@sabrinamsh

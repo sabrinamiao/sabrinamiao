@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sabrinamiao.github.io/sabrinamiao/</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/case-studies/</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/writing/</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/projects/swod.html</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://sabrinamiao.github.io/sabrinamiao/llms-full.txt</loc>
+    <lastmod>2026-08-07</lastmod>
   </url>
 </urlset>

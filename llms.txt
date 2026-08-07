@@ -1,14 +1,35 @@
-Sabrina Miao
-Title: Cross-Platform Developer
-Location: Stockholm, Sweden
-Portfolio: https://sabrinamiao.github.io/sabrinamiao/
-GitHub: https://github.com/sabrinamiao
+# Sabrina Miao - Portfolio LLM Index
 
-PrimarySkills: TypeScript, React, React Native, Electron, Node.js, Next.js, Vue
-SecondarySkills: Native modules, hardware integration, CI/CD, testing, accessibility, documentation
+## Purpose
+Concise source index for Sabrina Miao's portfolio, project evidence, and technical writing.
+Primary canonical source: https://sabrinamiao.github.io/sabrinamiao/
+Last updated: 2026-08-07
 
-Keywords: cross-platform, mobile, desktop, web, TypeScript, React, React Native, Electron, Next.js, Node.js, open-source, maintainer, prototyping, prompt-engineering
+## Identity
+- Name: Sabrina Miao
+- Title: Cross-Platform Developer
+- Location: Stockholm, Sweden
+- Portfolio: https://sabrinamiao.github.io/sabrinamiao/
+- GitHub: https://github.com/sabrinamiao
+- Writing: https://sabrinamiao.github.io/sabrinamiao/writing/
 
-AIWorkflow: AI is used to augment ideation, prototyping, and documentation; all AI-generated suggestions are human-reviewed, tested, and version-controlled.
+## Specialization
+- Core stack: TypeScript, React Native, React, Electron, Node.js, Next.js
+- Focus: Cross-platform product development (mobile, desktop, web)
+- Working style: AI-assisted development with human review, testing, and versioned delivery
 
-Contact: Open an issue or PR on GitHub or visit the portfolio for more details.
+## Portfolio Evidence
+- SWOD case study: https://sabrinamiao.github.io/sabrinamiao/projects/swod.html
+- Flow Watt case study: https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html
+- Smart Fridge case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html
+- Smart-Board case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html
+- Guess What - Movie case study: https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html
+- Case study index: https://sabrinamiao.github.io/sabrinamiao/case-studies/
+
+## Writing and Research
+- Technical writing hub: https://sabrinamiao.github.io/sabrinamiao/writing/
+- Medium profile: https://medium.com/@sabrinamsh
+
+## Deeper Material
+- Extended factual summaries: https://sabrinamiao.github.io/sabrinamiao/llms-full.txt
+- Repository profile and source links: https://github.com/sabrinamiao?tab=repositories

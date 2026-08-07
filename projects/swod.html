@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SWOD case study by Sabrina Miao: a cross-platform language-learning app built with React Native and TypeScript."
+    />
+    <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/projects/swod.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SWOD Case Study | Sabrina Miao" />
+    <meta property="og:description" content="Problem, role, architecture, constraints, and outcomes for SWOD - Swedish Word of the Day." />
+    <meta property="og:url" content="https://sabrinamiao.github.io/sabrinamiao/projects/swod.html" />
+    <meta property="og:image" content="https://sabrinamiao.github.io/sabrinamiao/images/projects/swod-live.png" />
+    <meta property="og:image:alt" content="SWOD project preview" />
+    <title>SWOD Case Study | Sabrina Miao</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#person",
+            "@type": "Person",
+            "name": "Sabrina Miao",
+            "url": "https://sabrinamiao.github.io/sabrinamiao/"
+          },
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html#page",
+            "@type": "WebPage",
+            "name": "SWOD Case Study",
+            "url": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html",
+            "mainEntity": {
+              "@id": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html#project"
+            }
+          },
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html#project",
+            "@type": ["CreativeWork", "SoftwareApplication"],
+            "name": "SWOD - Swedish Word of the Day",
+            "url": "https://swedishoftheday.se/",
+            "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/swod-live.png",
+            "author": {
+              "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+            },
+            "dateCreated": "2024-06-08",
+            "dateModified": "2026-08-07",
+            "programmingLanguage": "TypeScript",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Android, iOS, Web",
+            "description": "Cross-platform language-learning app that introduces one Swedish word or phrase per day with examples and multilingual context."
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html" aria-label="Sabrina Miao home">
+          <span class="brand-mark">
+            <img src="../images/logo.jpeg" alt="" width="40" height="40" loading="eager" decoding="async" />
+          </span>
+          <span class="brand-name">Sabrina Miao<span class="dot">.</span></span>
+        </a>
+        <nav>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#ai">AI</a>
+          <a href="../writing/index.html">Writing</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="subpage">
+      <section class="section">
+        <div class="container">
+          <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#projects">Projects</a> / SWOD</p>
+          <h1>SWOD - Swedish Word of the Day</h1>
+          <p class="lead">
+            A language-learning product that serves one Swedish word or short phrase per day,
+            then explains usage in English, Swedish, and Chinese.
+          </p>
+          <p class="project-links">
+            <a href="https://swedishoftheday.se/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </p>
+
+          <div class="detail-grid">
+            <article class="detail-card">
+              <h2>Case Study Summary</h2>
+              <ul class="detail-meta">
+                <li><strong>Problem:</strong> Learners often forget vocabulary when practice is irregular.</li>
+                <li><strong>Audience:</strong> Busy language learners who need a low-effort daily routine.</li>
+                <li><strong>Role:</strong> Solo developer across product design, implementation, and iteration.</li>
+                <li><strong>Scope:</strong> Mobile and web clients plus backend content delivery.</li>
+                <li><strong>Timeline:</strong> 2024 to present; actively maintained.</li>
+                <li><strong>Stack:</strong> React Native, TypeScript, Node.js.</li>
+                <li><strong>Constraints:</strong> Keep interaction short, content clear, and translations accurate.</li>
+                <li><strong>Technical decisions:</strong> Shared TypeScript domain models and reusable display components to keep term cards consistent.</li>
+                <li><strong>Results:</strong> Supports three reading languages and multiple client implementations with a single core concept.</li>
+              </ul>
+            </article>
+            <aside class="detail-card">
+              <img
+                src="../images/projects/swod-live.png"
+                alt="SWOD case study preview"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                Evidence links and implementation notes are maintained here to make this project
+                easier to cite and review.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Sabrina Miao - Extended Portfolio Summaries
 
-Last updated: 2026-08-07
+Last updated: 2026-08-27
 Canonical homepage: https://sabrinamiao.github.io/sabrinamiao/
 
 ## Profile
@@ -43,6 +43,14 @@ Primary specialization: React Native, Electron, and TypeScript product developme
 - Role: Product concept and implementation.
 - Stack: Electron, Node.js, TypeScript.
 - Evidence notes: Case-study source of truth for architecture and delivery rationale.
+
+### Jira TimeReporter
+- Case study: https://sabrinamiao.github.io/sabrinamiao/projects/jira-reporter.html
+
+- Scope: VS Code extension for automatic Jira worklog time tracking with idle detection and explicit reporting.
+- Role: Solo developer.
+- Stack: TypeScript, VS Code Extension API.
+- Evidence notes: Published extension on VS Code Marketplace.
 
 ### Guess What - Movie
 - Case study: https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html

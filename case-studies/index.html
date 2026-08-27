@@ -5,77 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Selected cross-platform case studies by Sabrina Miao covering React Native, Electron, and TypeScript product work."
+      content="Case studies from Sabrina Miao: detailed documentation of architectural decisions, constraints, and outcomes across portfolio projects."
     />
     <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/case-studies/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Case Studies | Sabrina Miao" />
-    <meta property="og:description" content="Problem-to-result case studies for mobile, desktop, and web products." />
+    <meta property="og:title" content="Selected Case Studies | Sabrina Miao" />
+    <meta
+      property="og:description"
+      content="Detailed documentation of architectural decisions, constraints, and outcomes across Sabrina Miao's portfolio projects."
+    />
     <meta property="og:url" content="https://sabrinamiao.github.io/sabrinamiao/case-studies/" />
     <meta property="og:image" content="https://sabrinamiao.github.io/sabrinamiao/images/og-image.png" />
-    <meta property="og:image:alt" content="Case studies index preview from Sabrina Miao portfolio" />
+    <meta property="og:image:alt" content="Sabrina Miao case studies preview" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Case Studies | Sabrina Miao" />
-    <meta name="twitter:description" content="Problem-to-result case studies for mobile, desktop, and web products." />
+    <meta name="twitter:title" content="Selected Case Studies | Sabrina Miao" />
+    <meta
+      name="twitter:description"
+      content="Detailed documentation of architectural decisions, constraints, and outcomes across Sabrina Miao's portfolio projects."
+    />
     <meta name="twitter:image" content="https://sabrinamiao.github.io/sabrinamiao/images/og-image.png" />
-    <meta name="twitter:image:alt" content="Case studies index preview from Sabrina Miao portfolio" />
-    <title>Case Studies | Sabrina Miao</title>
+    <meta name="twitter:image:alt" content="Sabrina Miao case studies preview" />
+    <title>Selected Case Studies | Sabrina Miao</title>
     <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
     <link rel="stylesheet" href="../styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@id": "https://sabrinamiao.github.io/sabrinamiao/case-studies/#page",
-            "@type": "CollectionPage",
-            "name": "Selected Case Studies",
-            "url": "https://sabrinamiao.github.io/sabrinamiao/case-studies/",
-            "description": "Collection of case studies with role, constraints, architecture decisions, and measurable project signals.",
-            "hasPart": {
-              "@id": "https://sabrinamiao.github.io/sabrinamiao/case-studies/#list"
-            }
-          },
-          {
-            "@id": "https://sabrinamiao.github.io/sabrinamiao/case-studies/#list",
-            "@type": "ItemList",
-            "name": "Sabrina Miao case studies",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "url": "https://sabrinamiao.github.io/sabrinamiao/projects/swod.html",
-                "name": "SWOD - Swedish Word of the Day"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "url": "https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html",
-                "name": "Flow Watt"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "url": "https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html",
-                "name": "Smart Fridge"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "url": "https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html",
-                "name": "Smart-Board"
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "url": "https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html",
-                "name": "Guess What - Movie"
-              }
-            ]
-          }
-        ]
-      }
-    </script>
   </head>
   <body>
     <header class="site-header">
@@ -101,38 +53,60 @@
           <p class="breadcrumb"><a href="../index.html">Home</a> / Case Studies</p>
           <h1>Selected Case Studies</h1>
           <p class="lead">
-            These pages are optimized as reusable source material for humans and AI systems:
-            each includes problem context, role, release scope, architecture constraints, and observable outcomes.
+            Each case study documents a specific decision, constraint, or outcome that shaped how a project was built.
           </p>
-          <div class="projects-grid">
-            <article class="project-card" data-index="C1">
-              <h3><a href="../projects/swod.html">SWOD - Swedish Word of the Day</a></h3>
-              <p>Language-learning routine app covering mobile and web implementations.</p>
-              <span>React Native · TypeScript</span>
+
+          <div class="case-study-grid">
+            <article class="case-study-card">
+              <h2><a href="../projects/swod.html">SWOD - Swedish Word of the Day</a></h2>
+              <p>Cross-platform language-learning app focused on consistent daily-term delivery across Android, iOS, and web clients.</p>
+              <span class="case-study-tag">React Native</span>
+              <span class="case-study-tag">TypeScript</span>
             </article>
-            <article class="project-card" data-index="C2">
-              <h3><a href="../projects/flow-watt.html">Flow Watt</a></h3>
-              <p>Energy tracking UX focused on readable dashboards for everyday use.</p>
-              <span>React Native · Data Visualization</span>
+
+            <article class="case-study-card">
+              <h2><a href="../projects/flow-watt.html">Flow Watt</a></h2>
+              <p>Energy-tracking product built with mobile-first dashboards and chart readability as primary design constraints.</p>
+              <span class="case-study-tag">React Native</span>
+              <span class="case-study-tag">TypeScript</span>
             </article>
-            <article class="project-card" data-index="C3">
-              <h3><a href="../projects/smart-fridge.html">Smart Fridge</a></h3>
-              <p>Inventory lifecycle project designed to reduce avoidable household food waste.</p>
-              <span>React Native · Node.js</span>
+
+            <article class="case-study-card">
+              <h2><a href="../projects/smart-fridge.html">Smart Fridge</a></h2>
+              <p>Inventory management app that prioritizes "use-soon" items to reduce avoidable food waste in household settings.</p>
+              <span class="case-study-tag">React Native</span>
+              <span class="case-study-tag">TypeScript</span>
             </article>
-            <article class="project-card" data-index="C4">
-              <h3><a href="../projects/smart-board.html">Smart-Board</a></h3>
-              <p>Desktop-first coordination board for families and shared-home logistics.</p>
-              <span>Electron · TypeScript</span>
+
+            <article class="case-study-card">
+              <h2><a href="../projects/smart-board.html">Smart-Board</a></h2>
+              <p>Electron-based family operations board centralizing schedules, reminders, and shared daily updates.</p>
+              <span class="case-study-tag">Electron</span>
+              <span class="case-study-tag">Node.js</span>
             </article>
-            <article class="project-card" data-index="C5">
-              <h3><a href="../projects/guess-what-movie.html">Guess What - Movie</a></h3>
-              <p>Social game product emphasizing fast rounds and low setup friction.</p>
-              <span>React · TypeScript</span>
+
+            <article class="case-study-card">
+              <h2><a href="../projects/guess-what-movie.html">Guess What - Movie</a></h2>
+              <p>Social movie-guessing game optimized for fast multiplayer rounds and low-friction group setup.</p>
+              <span class="case-study-tag">React</span>
+              <span class="case-study-tag">TypeScript</span>
+            </article>
+
+            <article class="case-study-card">
+              <h2><a href="../projects/jira-reporter.html">Jira TimeReporter</a></h2>
+              <p>VS Code extension that automatically tracks time against Jira tickets from Git branches, with idle detection and explicit worklog reporting.</p>
+              <span class="case-study-tag">TypeScript</span>
+              <span class="case-study-tag">VS Code Extension API</span>
             </article>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Sabrina Miao</p>
+      </div>
+    </footer>
   </body>
 </html>

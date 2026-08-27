@@ -24,6 +24,7 @@ Last updated: 2026-08-07
 - Smart Fridge case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html
 - Smart-Board case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html
 - Guess What - Movie case study: https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html
+- Jira TimeReporter case study: https://sabrinamiao.github.io/sabrinamiao/projects/jira-reporter.html
 - Case study index: https://sabrinamiao.github.io/sabrinamiao/case-studies/
 
 ## Writing and Research

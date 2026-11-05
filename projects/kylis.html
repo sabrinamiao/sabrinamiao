@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kylis case study by Sabrina Miao: shared fridge and shopping list app (React Native, TypeScript) that tracks expiry dates and reduces household food waste."
+    />
+    <link rel="canonical" href="https://sabrinamiao.github.io/sabrinamiao/projects/kylis.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Kylis Case Study | Sabrina Miao" />
+    <meta property="og:description" content="How Kylis tackles food-waste risk with inventory visibility and expiry-aware UX." />
+    <meta property="og:url" content="https://sabrinamiao.github.io/sabrinamiao/projects/kylis.html" />
+    <meta property="og:image" content="https://sabrinamiao.github.io/sabrinamiao/images/projects/kylis-live.jpg" />
+    <meta property="og:image:alt" content="Kylis project preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kylis Case Study | Sabrina Miao" />
+    <meta name="twitter:description" content="How Kylis tackles food-waste risk with inventory visibility and expiry-aware UX." />
+    <meta name="twitter:image" content="https://sabrinamiao.github.io/sabrinamiao/images/projects/kylis-live.jpg" />
+    <meta name="twitter:image:alt" content="Kylis project preview" />
+    <title>Kylis Case Study | Sabrina Miao</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/#person",
+            "@type": "Person",
+            "name": "Sabrina Miao",
+            "url": "https://sabrinamiao.github.io/sabrinamiao/"
+          },
+          {
+            "@id": "https://sabrinamiao.github.io/sabrinamiao/projects/kylis.html#project",
+            "@type": ["CreativeWork", "SoftwareApplication"],
+            "name": "Kylis",
+            "url": "https://kylis-3e9b8.web.app/",
+            "sameAs": "https://github.com/sabrinamiao/smart-fridge",
+            "image": "https://sabrinamiao.github.io/sabrinamiao/images/projects/kylis-live.jpg",
+            "author": {
+              "@id": "https://sabrinamiao.github.io/sabrinamiao/#person"
+            },
+            "dateCreated": "2024-11-11",
+            "dateModified": "2026-11-05",
+            "applicationCategory": "LifestyleApplication",
+            "programmingLanguage": "TypeScript",
+            "description": "Mobile inventory management project that helps households track food usage windows and reduce waste."
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://sabrinamiao.github.io/sabrinamiao/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Case Studies",
+                "item": "https://sabrinamiao.github.io/sabrinamiao/case-studies/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Kylis"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html" aria-label="Sabrina Miao home">
+          <span class="brand-mark">
+            <img src="../images/logo.jpeg" alt="" width="40" height="40" loading="eager" decoding="async" />
+          </span>
+          <span class="brand-name">Sabrina Miao<span class="dot">.</span></span>
+        </a>
+        <nav>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#ai">AI</a>
+          <a href="../writing/index.html">Writing</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="subpage">
+      <section class="section">
+        <div class="container">
+          <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#projects">Projects</a> / Kylis</p>
+          <h1>Kylis</h1>
+          <p class="lead">
+            Kylis (formerly Smart Fridge) is a shared fridge and shopping list app that tracks
+            expiry dates, suggests what to cook and buy, and keeps a whole household on the same list.
+          </p>
+          <p class="project-links">
+            <a href="https://kylis-3e9b8.web.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </p>
+
+          <div class="detail-grid">
+            <article class="detail-card">
+              <h2>Case Study Summary</h2>
+              <ul class="detail-meta">
+                <li><strong>Problem:</strong> Households lose track of what is in a shared fridge, so food expires unused and duplicates get bought.</li>
+                <li><strong>Audience:</strong> Families, partners and flatmates sharing one kitchen, starting in Sweden.</li>
+                <li><strong>Role:</strong> Solo engineer, end to end.</li>
+                <li><strong>Scope:</strong> Expiry tracking with category shelf-life defaults, barcode scanning (product names from Open Food Facts), receipt-photo entry, a shopping list that suggests low-stock and soon-to-expire items, AI recipe generation from what is in the fridge (prioritizing items about to expire, respecting diets and allergies), saved favourites, reminders, and household sharing via invite code.</li>
+                <li><strong>Timeline:</strong> Repository created 2024-11-11 and maintained through 2026.</li>
+                <li><strong>Stack:</strong> React Native, TypeScript.</li>
+                <li><strong>Release surfaces:</strong> iOS and Android (App Store and Google Play launch coming soon), from a single codebase.</li>
+                <li><strong>Highlight:</strong> Recipe generation turns the live inventory into cooking ideas, so expiring items get used first and a recipe's missing ingredients can be added to the shared shopping list in one tap.</li>
+                <li><strong>Languages:</strong> Swedish, English and Chinese, with shelf-life defaults for every category.</li>
+                <li><strong>Constraints:</strong> Fast item input on mobile and low-friction daily upkeep, plus a free guest mode (30 items, 20 list entries, 10 scans) before sign-in with Apple or Google.</li>
+                <li><strong>Technical decisions:</strong> Typed item states and expiry fields to support colour-coded fresh/soon/expired status, predictable filtering and reminders; one shared inventory per household.</li>
+                <li><strong>Results:</strong> Single-repository app, explicit lifecycle states for active/use-soon/expired items, and an implementation timeline spanning 2024-2026.</li>
+                <li><strong>Public metrics note:</strong> User/download counts are not published; this page reports only verifiable implementation scope.</li>
+              </ul>
+            </article>
+            <aside class="detail-card">
+              <img
+                src="../images/projects/kylis-live.jpg"
+                alt="Kylis project preview"
+                width="800"
+                height="609"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                This project is documented as a practical case study of Kylis, formerly Smart Fridge, so the implementation
+                context is citable even while repository visibility is private.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

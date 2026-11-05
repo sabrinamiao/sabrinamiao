@@ -3,7 +3,7 @@
 ## Purpose
 Concise source index for Sabrina Miao's portfolio, project evidence, and technical writing.
 Primary canonical source: https://sabrinamiao.github.io/sabrinamiao/
-Last updated: 2026-08-07
+Last updated: 2026-11-05
 
 ## Identity
 - Name: Sabrina Miao
@@ -21,7 +21,7 @@ Last updated: 2026-08-07
 ## Portfolio Evidence
 - SWOD case study: https://sabrinamiao.github.io/sabrinamiao/projects/swod.html
 - Flow Watt case study: https://sabrinamiao.github.io/sabrinamiao/projects/flow-watt.html
-- Smart Fridge case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-fridge.html
+- Kylis case study: https://sabrinamiao.github.io/sabrinamiao/projects/kylis.html
 - Smart-Board case study: https://sabrinamiao.github.io/sabrinamiao/projects/smart-board.html
 - Guess What - Movie case study: https://sabrinamiao.github.io/sabrinamiao/projects/guess-what-movie.html
 - Jira TimeReporter case study: https://sabrinamiao.github.io/sabrinamiao/projects/jira-reporter.html

@@ -3,6 +3,7 @@
   --bg-elevated: #17111f;
   --text: #f3ece0;
   --text-muted: #9a93a6;
+  --focus: #ffd166;
   --primary: #c1392f;
   --primary-strong: #56090d;
   --primary-soft: rgba(193, 57, 47, 0.14);
@@ -726,7 +727,7 @@ h2 {
 }
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #ffd166;
+  outline: 3px solid var(--focus, #ffd166);
   outline-offset: 3px;
   border-radius: 4px;
 }

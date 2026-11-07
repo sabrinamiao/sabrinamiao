@@ -59,9 +59,10 @@
         .querySelector('meta[name="firebase-api-key"]')
         ?.content?.trim();
       // The deploy workflow replaces this placeholder; locally it stays as-is,
+      // (split so the deploy-time replace does not rewrite this comparison),
       // so treat it as "no key" instead of sending it to Firebase (400 error).
       const firebaseApiKey =
-        rawFirebaseApiKey && !rawFirebaseApiKey.startsWith("__")
+        rawFirebaseApiKey && rawFirebaseApiKey !== "__FIREBASE_API_KEY" + "__"
           ? rawFirebaseApiKey
           : "";
 

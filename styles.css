@@ -250,14 +250,6 @@ h2 {
   font-weight: 600;
 }
 
-.topic-links a.btn {
-  text-decoration: none;
-}
-
-.topic-links a.btn-primary {
-  color: #fff;
-}
-
 .btn-primary {
   background: var(--primary);
   color: white;
@@ -486,14 +478,14 @@ h2 {
 }
 
 .project-links a,
-.topic-links a {
+.topic-links a:not(.btn) {
   color: var(--cream);
   text-decoration: underline;
   text-underline-offset: 0.15rem;
 }
 
 .project-links a:hover,
-.topic-links a:hover {
+.topic-links a:not(.btn):hover {
   color: var(--text);
 }
 

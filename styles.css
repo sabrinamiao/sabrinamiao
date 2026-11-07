@@ -6,6 +6,7 @@
   --focus: #ffd166;
   --primary: #c1392f;
   --primary-strong: #56090d;
+  --primary-text: #ea6f63;
   --primary-soft: rgba(193, 57, 47, 0.14);
   --cream: #d9cd9d;
   --border: #2a2233;
@@ -98,7 +99,7 @@ a {
 }
 
 .brand-name .dot {
-  color: var(--primary);
+  color: var(--primary-text);
 }
 
 .nav nav {
@@ -172,7 +173,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--primary);
+  color: var(--primary-text);
   font-family: var(--mono);
   font-weight: 700;
   text-transform: uppercase;
@@ -201,7 +202,7 @@ h1 {
 }
 
 h1 .accent {
-  color: var(--primary);
+  color: var(--primary-text);
 }
 
 h2 {
@@ -247,6 +248,14 @@ h2 {
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 600;
+}
+
+.topic-links a.btn {
+  text-decoration: none;
+}
+
+.topic-links a.btn-primary {
+  color: #fff;
 }
 
 .btn-primary {
@@ -311,7 +320,7 @@ h2 {
   content: "▸";
   position: absolute;
   left: 0;
-  color: var(--primary);
+  color: var(--primary-text);
   font-family: var(--mono);
 }
 
@@ -331,7 +340,7 @@ h2 {
 
 .section-index {
   margin: 0 0 0.3rem;
-  color: var(--primary);
+  color: var(--primary-text);
   font-family: var(--mono);
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -341,6 +350,10 @@ h2 {
 .section-title {
   position: relative;
   display: inline-block;
+}
+
+.ghost::before {
+  content: attr(data-text);
 }
 
 .ghost {
@@ -459,7 +472,7 @@ h2 {
 }
 
 .project-card span {
-  color: var(--primary);
+  color: var(--primary-text);
   font-family: var(--mono);
   font-size: 0.85rem;
   font-weight: 600;
@@ -582,7 +595,7 @@ h2 {
 }
 
 .token-str {
-  color: var(--primary);
+  color: var(--primary-text);
 }
 
 .site-footer {

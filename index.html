@@ -306,11 +306,27 @@
           });
 
           const currentConsent = getConsent();
-          await syncExistingConsentIfNeeded();
+          // Defer Firebase work until the page has loaded and the browser is idle.
+          const whenIdle = (fn) => {
+            const run = () =>
+              "requestIdleCallback" in window
+                ? requestIdleCallback(fn, { timeout: 4000 })
+                : setTimeout(fn, 2000);
+            if (document.readyState === "complete") {
+              run();
+            } else {
+              window.addEventListener("load", run, { once: true });
+            }
+          };
+          whenIdle(() => {
+            void syncExistingConsentIfNeeded();
+          });
 
           if (currentConsent === CONSENT_ACCEPTED) {
             hideConsentBanner();
-            await initializeAnalytics();
+            whenIdle(() => {
+              void initializeAnalytics();
+            });
             return;
           }
 
@@ -554,7 +570,7 @@
       <div class="container nav">
         <a class="brand" href="#top" aria-label="Sabrina Miao home">
           <span class="brand-mark">
-            <img src="images/logo.jpeg" alt="" width="40" height="40" loading="eager" decoding="async" />
+            <img src="images/logo-80.jpeg" alt="" width="40" height="40" loading="eager" decoding="async" />
           </span>
           <span class="brand-name">Sabrina Miao<span class="dot">.</span></span>
         </a>
@@ -683,8 +699,8 @@
                 support (EN/SV/ZH), and case-study documentation of architecture decisions.
               </p>
               <p class="project-links">
-                <a href="projects/swod.html">Case study</a>
-                <a href="https://swedishoftheday.se/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> (opens in new tab)</span></a>
+                <a href="projects/swod.html">Case study<span class="sr-only"> for Swedish of the Day</span></a>
+                <a href="https://swedishoftheday.se/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> for Swedish of the Day (opens in new tab)</span></a>
               </p>
               <span>React Native · TypeScript</span>
             </article>
@@ -698,8 +714,8 @@
                 and reusable TypeScript components across feature screens.
               </p>
               <p class="project-links">
-                <a href="projects/flow-watt.html">Case study</a>
-                <a href="https://watt-wise-190d9.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> (opens in new tab)</span></a>
+                <a href="projects/flow-watt.html">Case study<span class="sr-only"> for Flow Watt</span></a>
+                <a href="https://watt-wise-190d9.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> for Flow Watt (opens in new tab)</span></a>
               </p>
               <span>React Native · TypeScript</span>
             </article>
@@ -713,8 +729,8 @@
                 reduces household food waste.
               </p>
               <p class="project-links">
-                <a href="projects/kylis.html">Case study</a>
-                <a href="https://kylis-3e9b8.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> (opens in new tab)</span></a>
+                <a href="projects/kylis.html">Case study<span class="sr-only"> for Kylis</span></a>
+                <a href="https://kylis-3e9b8.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> for Kylis (opens in new tab)</span></a>
               </p>
               <span>React Native · TypeScript</span>
             </article>
@@ -727,7 +743,7 @@
                 updates in one desktop-first interface.
               </p>
               <p class="project-links">
-                <a href="projects/smart-board.html">Case study</a>
+                <a href="projects/smart-board.html">Case study<span class="sr-only"> for Smart Board</span></a>
                 <span>Live demo coming soon</span>
               </p>
               <span>Electron · Node.js</span>
@@ -742,8 +758,8 @@
                 clear prompts, and fast replay for parties and team sessions.
               </p>
               <p class="project-links">
-                <a href="projects/guess-what-movie.html">Case study</a>
-                <a href="https://guess-what-movie.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> (opens in new tab)</span></a>
+                <a href="projects/guess-what-movie.html">Case study<span class="sr-only"> for Guess What Movie</span></a>
+                <a href="https://guess-what-movie.web.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> for Guess What Movie (opens in new tab)</span></a>
               </p>
               <span>React · TypeScript</span>
             </article>
@@ -758,7 +774,7 @@
                 branches, with idle detection, review dashboard, and explicit worklog reporting.
               </p>
               <p class="project-links">
-                <a href="projects/jira-reporter.html">Case study</a>
+                <a href="projects/jira-reporter.html">Case study<span class="sr-only"> for Jira Time Reporter</span></a>
                 <a href="https://marketplace.visualstudio.com/items?itemName=nordikat.jira-timereporter" target="_blank" rel="noopener noreferrer">Marketplace<span class="sr-only"> (opens in new tab)</span></a>
               </p>
               <span>TypeScript · VS Code Extension API</span>
